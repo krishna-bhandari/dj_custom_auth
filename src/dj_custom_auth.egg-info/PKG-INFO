@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: dj-custom-auth
+Version: 0.0.1
+Summary: A Django app to create custom user types and their roles.
+Home-page: https://github.com/krishna-bhandari/dj_custom_auth/tree/main
+Author: Krishna Bhandari
+Author-email: krishnabhandaribabu@gmail.com
+License: BSD-3-Clause  # Example license
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+=====
+Auth_user
+=====
+
+auth_user is a Django app to which is used to serve user objects. It is used to authenticate and authorize user, create custom user types (roles) and assign them different permissions.
+
+Detailed documentation is in the "docs" directory.
+
+Quick start
+-----------
+
+Note**: This package must be used before running your first migrate command
+
+1. Add "auth_user" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'auth_user',
+    ]
+
+3. Also change the default user model for your project. To do that add this in settings.py ::
+
+    AUTH_USER_MODEL = 'auth_user.User'
+
+
+2. Include the polls URLconf in your project urls.py like this::
+
+    path('auth_user/', include('auth_user.urls')),
+
+3. Run ``python manage.py migrate`` to create the auth_user models.
+
+4. Start the development server and visit http://127.0.0.1:8000/admin/
+   to create permissions and other customizations (you'll need the Admin app enabled).
+
+
+
