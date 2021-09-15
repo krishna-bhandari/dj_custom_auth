@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: dj-custom-auth
-Version: 0.0.1
+Version: 0.1
 Summary: A Django app to create custom user types and their roles.
 Home-page: https://github.com/krishna-bhandari/dj_custom_auth/tree/main
 Author: Krishna Bhandari
@@ -15,7 +15,7 @@ Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
-=====
+
 Auth_user
 =====
 
@@ -26,7 +26,7 @@ Detailed documentation is in the "docs" directory.
 Quick start
 -----------
 
-Note**: This package must be used before running your first migrate command
+Note**: This package must be used before running your first migrate command.
 
 1. Add "auth_user" to your INSTALLED_APPS setting like this::
 
