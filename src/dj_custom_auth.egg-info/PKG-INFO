@@ -5,7 +5,7 @@ Summary: A Django app to create custom user types and their roles.
 Home-page: https://github.com/krishna-bhandari/dj_custom_auth/tree/main
 Author: Krishna Bhandari
 Author-email: krishnabhandaribabu@gmail.com
-License: BSD-3-Clause  # Example license
+License: BSD-3-Clause
 Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
