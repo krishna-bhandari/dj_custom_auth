@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from .serializers import LoginSerializers
+from rest_framework_simplejwt.views import TokenRefreshView
 
-# Create your views here.
+
+class LoginApiView(TokenRefreshView):
+    serializer_class = LoginSerializers

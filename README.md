@@ -1,4 +1,4 @@
-=====
+
 Auth_user
 =====
 
@@ -9,7 +9,7 @@ Detailed documentation is in the "docs" directory.
 Quick start
 -----------
 
-Note**: This package must be used before running your first migrate command
+Note**: This package must be used before running your first migrate command.
 
 1. Add "auth_user" to your INSTALLED_APPS setting like this::
 
