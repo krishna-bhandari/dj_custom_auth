@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: dj-custom-auth
-Version: 0.1
+Version: 0.2
 Summary: A Django app to create custom user types and their roles.
 Home-page: https://github.com/krishna-bhandari/dj_custom_auth/tree/main
 Author: Krishna Bhandari

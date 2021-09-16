@@ -1,9 +1,10 @@
+from enum import unique
 from .models import DevSetup
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.contrib import auth
-from rest_framework.exceptions import AuthenticationFailed
+from rest_framework.exceptions import AuthenticationFailed, ValidationError
 
 User = get_user_model()
 class LoginSerializers(TokenObtainPairSerializer):
@@ -55,4 +56,37 @@ class LoginSerializers(TokenObtainPairSerializer):
             'access': access_token,
             'refresh': refresh_token,
         }
+
+
+class RegisterUserSerializers(serializers.ModelSerializer):
+    password = serializers.CharField(max_length=68, min_length=8, write_only=True)
+    email = serializers.EmailField(required=True)
+
+    class Meta:
+        model = User
+        fields = ['email','username', 'password']
+
+
+
+    def validate(self, attrs):
+    
+        email = attrs.get('email', '')
+        username = attrs.get('username', '')
+        if User.objects.filter(email = email).exists():
+            raise ValidationError({"email":"email already exists"})
+        if not username.isalnum():
+            raise serializers.ValidationError('The username should only contain only alphanumeric value')
+        return attrs
+
+    def create(self, validated_data):
+        return User.objects.create_user(**validated_data)
+    
+
+class EmailVerificationSerializers(serializers.ModelSerializer):
+    tokens = serializers.CharField(max_length=555, help_text="Enter same email as you have provided during regristrations")
+
+    class Meta:
+        model = User
+        fields = ['tokens']
+
 

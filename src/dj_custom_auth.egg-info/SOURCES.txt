@@ -11,8 +11,10 @@ src/auth_user/models.py
 src/auth_user/serializers.py
 src/auth_user/tests.py
 src/auth_user/urls.py
+src/auth_user/utils.py
 src/auth_user/views.py
 src/auth_user/migrations/0001_initial.py
+src/auth_user/migrations/0002_auto_20210916_0820.py
 src/auth_user/migrations/__init__.py
 src/dj_custom_auth.egg-info/PKG-INFO
 src/dj_custom_auth.egg-info/SOURCES.txt

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="dj-custom-auth",
-    version="0.1",
+    version="0.2",
     author="Krishna Bhandari",
     author_email="krishnabhandaribabu@gmail.com",
     description="A Django app to create custom user types and their roles.",
