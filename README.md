@@ -18,17 +18,17 @@ Note**: This package must be used before running your first migrate command.
         'auth_user',
     ]
 
-3. Also change the default user model for your project. To do that add this in settings.py ::
+2. Also change the default user model for your project. To do that add this in settings.py ::
 
     AUTH_USER_MODEL = 'auth_user.User'
 
 
-2. Include the polls URLconf in your project urls.py like this::
+3. Include the polls URLconf in your project urls.py like this::
 
     path('auth_user/', include('auth_user.urls')),
 
-3. Run ``python manage.py migrate`` to create the auth_user models.
+4. Run ``python manage.py migrate`` to create the auth_user models.
 
-4. Start the development server and visit http://127.0.0.1:8000/admin/
+5. Start the development server and visit http://127.0.0.1:8000/admin/
    to create permissions and other customizations (you'll need the Admin app enabled).
 
